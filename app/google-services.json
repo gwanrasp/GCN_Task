@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1007645396988",
+    "firebase_url": "https://gcn-task.firebaseio.com",
+    "project_id": "gcn-task",
+    "storage_bucket": "gcn-task.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1007645396988:android:68d34c3e58bc2f3177ec79",
+        "android_client_info": {
+          "package_name": "com.jeevan.gcntask"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1007645396988-dv37g1068t35kbtd6mfc6o0ka5lr007m.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAAA5SWGERmfB9M-NnuzN1sDx6WCJ-pASk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1007645396988-dv37g1068t35kbtd6mfc6o0ka5lr007m.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

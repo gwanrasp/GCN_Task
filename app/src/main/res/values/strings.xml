@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">GCN Task</string>
+    <string name="prompt_msg">Message Box</string>
+    <string name="action_send">Send Button</string>
+</resources>
