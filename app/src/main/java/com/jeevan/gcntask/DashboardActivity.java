@@ -12,6 +12,8 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.cardview.widget.CardView;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.jeevan.R;
+import com.jeevan.flashchatnewfirebase.MainChatActivity;
 
 public class DashboardActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -65,10 +67,13 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
                 break;
 
 
-//            case R.id.chat_card:
-//                i= new Intent(this, ChatActivity.class);
-//                startActivity(i);
-//                break;
+            case R.id.chat_card:
+                i= new Intent(this, MainChatActivity.class);
+                startActivity(i);
+                break;
+
+
+
 
 
             default: break;
@@ -89,7 +94,7 @@ public class DashboardActivity extends AppCompatActivity implements View.OnClick
         switch (item.getItemId()) {
             case R.id.logout:
                 mAuth.signOut();
-                startActivity(new Intent(getApplicationContext(), LoginActivity.class));
+                startActivity(new Intent(getApplicationContext(),com.jeevan.gcntask.LoginActivity.class));
                 return true;
             default:
                 return super.onOptionsItemSelected(item);

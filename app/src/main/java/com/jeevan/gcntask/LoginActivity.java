@@ -18,6 +18,7 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.jeevan.R;
 
 public class LoginActivity extends AppCompatActivity {
 
@@ -60,7 +61,7 @@ public class LoginActivity extends AppCompatActivity {
 
     // Executed when Register button pressed
     public void signUp(View v){
-        startActivity(new Intent(getApplicationContext(),RegistrationActivity.class));
+        startActivity(new Intent(getApplicationContext(),com.jeevan.gcntask.RegistrationActivity.class));
     }
 
 
@@ -94,12 +95,13 @@ public class LoginActivity extends AppCompatActivity {
 
                 if(!task.isSuccessful()){
 
-                    alertDialog("Problem Signing in");
+                    alertDialog("Please check your email and password!! " +
+                            "Problem Signing in!!");
                     mDialog.dismiss();
 
                 }
                 else{
-                    session.createLoginSession(email);
+                   // session.createLoginSession(email);
                     Toast.makeText(getApplicationContext(),"Successful!!", Toast.LENGTH_SHORT).show();
                     startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
                    mDialog.dismiss();
@@ -126,7 +128,8 @@ public class LoginActivity extends AppCompatActivity {
     }
 
 
-
+    public void register(View view) {
+    }
 }
 
 

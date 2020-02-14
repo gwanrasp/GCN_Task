@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.app.AlertDialog;
 import android.app.ProgressDialog;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.text.TextUtils;
 import android.view.View;
@@ -17,8 +18,11 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.jeevan.R;
 
 public class RegistrationActivity extends AppCompatActivity {
+    public static final String CHAT_PREFS = "ChatPrefs";
+    public static final String DISPLAY_NAME_KEY = "username";
     private EditText memail;
     private EditText musername;
     private EditText mpassword;
@@ -27,6 +31,8 @@ public class RegistrationActivity extends AppCompatActivity {
     private TextView mlogin_txt;
     private FirebaseAuth mAuth;
     private ProgressDialog mDialog;
+
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -134,8 +140,9 @@ public class RegistrationActivity extends AppCompatActivity {
                     mDialog.dismiss();
                 }
                 else{
+                    saveDisplayName();
                     Toast.makeText(getApplicationContext(),"Successful!!", Toast.LENGTH_SHORT).show();
-                    startActivity(new Intent(getApplicationContext(), TodoActivity.class));
+                    startActivity(new Intent(getApplicationContext(), DashboardActivity.class));
 
                     mDialog.dismiss();
                 }
@@ -143,6 +150,17 @@ public class RegistrationActivity extends AppCompatActivity {
         });
 
     }
+
+
+    private void  saveDisplayName()
+
+    {
+        String displayName = musername.getText().toString();
+        SharedPreferences prefs = getSharedPreferences(CHAT_PREFS, 0);
+        prefs.edit().putString(DISPLAY_NAME_KEY, displayName).apply();
+
+    }
+
     private void showErrorDialog(String msg){
         new AlertDialog.Builder(this)
                 .setTitle("Oops")

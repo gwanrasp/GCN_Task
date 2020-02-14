@@ -9,6 +9,8 @@ import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
 import android.widget.ImageView;
 
+import com.jeevan.R;
+
 public class SplashActivity extends AppCompatActivity {
         private ImageView logo;
         private static int splashTimeOut=3000;
@@ -20,7 +22,7 @@ public class SplashActivity extends AppCompatActivity {
         new Handler().postDelayed(new Runnable(){
             @Override
             public void run(){
-                Intent i = new Intent(SplashActivity.this, LoginActivity.class);
+                Intent i = new Intent(SplashActivity.this, com.jeevan.gcntask.LoginActivity.class);
                 startActivity(i);
                 finish();
             }

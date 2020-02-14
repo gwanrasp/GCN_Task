@@ -5,6 +5,10 @@ public class Data {
     private String note;
     private String date;
     private String id;
+    private String profilename;
+    private String phoneno;
+    private String officepost;
+    private String officedepartment;
 
 
     public Data(){
@@ -17,6 +21,7 @@ public class Data {
         this.date = date;
         this.id = id;
     }
+
 
     public String getTitle() {
         return title;
@@ -49,4 +54,49 @@ public class Data {
     public void setId(String id) {
         this.id = id;
     }
+
+
+
+    public Data(String profilename, String phoneno, String officepost, String officedepartment, String id) {
+        this.profilename = profilename;
+        this.phoneno = phoneno;
+        this.officepost = officepost;
+        this.officedepartment = officedepartment;
+        this.id = id;
+
+
+    }
+
+    public String getProfilename() {
+        return profilename;
+    }
+
+    public void setProfilename(String profilename) {
+        this.profilename = profilename;
+    }
+
+    public String getPhoneno() {
+        return phoneno;
+    }
+
+    public void setPhoneno(String phoneno)  {
+        this.phoneno = phoneno;
+    }
+
+    public String getOfficepost() {
+        return officepost;
+    }
+
+    public void setOfficepost(String officepost) {
+        this.officepost = officepost;
+    }
+
+    public String getOfficedepartment() {
+        return officedepartment;
+    }
+
+    public void setOfficedepartment(String officedepartment) {
+        this.officedepartment = officedepartment;
+    }
+
 }
